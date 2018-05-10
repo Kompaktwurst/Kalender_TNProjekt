@@ -18,7 +18,7 @@ namespace Kalender_Gold_Coorp
         private byte[] HashedPassword;
         private List<DateTime> Urlaubstage;
         private List<DateTime> Krankheitstage;
-        private List<string[]> Tagesplanliste;
+        private List<string> Tagesplanliste;
         
 
 
@@ -28,7 +28,7 @@ namespace Kalender_Gold_Coorp
             Profilbild = Properties.Resources.user;
             Urlaubstage= new List<DateTime>();
             Krankheitstage = new List<DateTime>();
-            Tagesplanliste = new List<string[]>();
+            Tagesplanliste = new List<string>();
 
         }
         public bool Einloggen(string name, string passwort)
@@ -67,7 +67,7 @@ namespace Kalender_Gold_Coorp
         public int GetFreiUrlaubstage() => FreieUrlaubstage;
         public Image GetProfilbild() => Profilbild;
         public List<DateTime> GetKrankheitstage() => Krankheitstage;
-        public List<string[]> GetTagesplan() => Tagesplanliste;
+        public List<string> GetTagesplan() => Tagesplanliste;
     
         
 
@@ -87,7 +87,7 @@ namespace Kalender_Gold_Coorp
         public void SetStatus(string status_){Status = status_;}
         public void setPasswort(string text){ HashedPassword = GetMD5Hash(text);}
         public void setBenutzername(string name) { Benutzername = name; }
-        public void setTagesplan(List<string[]>Tagesplanliste_)
+        public void setTagesplan(List<string>Tagesplanliste_)
         {
             Tagesplanliste = Tagesplanliste_;
         }

@@ -7,22 +7,26 @@ namespace Kalender_Gold_Coorp
 {
     public partial class Tagesplan : Form
     {
+        int mov, movX, movy;
         private Konto k1;
         private DateTime Datum;
-        private Panel[] _Panels = new Panel[24];
-        private Label[] _Labels = new Label[24];
-        private List<string[]> Tagesplanliste;
-        public Tagesplan(Konto k1_,DateTime Datum_)
+        static int laenge = 24;
+        private Panel[] _Panels = new Panel[laenge];
+        private Label[] _Labels = new Label[laenge];
+        private List<string> Tagesplanliste;
+        public Tagesplan(Konto k1_, DateTime Datum_)
         {
             InitializeComponent();
             k1 = k1_;
             Datum = Datum_;
             Auswahldatum.Text = Datum.ToShortDateString();
-            Tagesplanliste = new List<string[]>();
+            Tagesplanliste = new List<string>();
             Tagesplanliste = k1.GetTagesplan();
             Form_init();
             Label_reset();
-           
+            Panel_reset();
+          
+
         }
         private void Panel_init()
         {
@@ -100,27 +104,39 @@ namespace Kalender_Gold_Coorp
         private void Form_init()
         {
             Panel_init();
-            Label_init(); 
+            Label_init();
         }
 
         private void Panel_Click(object sender, EventArgs e) //Alle Panels reagieren auf dieses Ereignis
         {
             Panel clickedPanel = sender as Panel;
-            clickedPanel.BackColor = Color.DimGray; 
+            if (clickedPanel.BackColor == Color.Transparent)
+            {
+                clickedPanel.BackColor = Color.DimGray;
+                return;
+            }
+            if (clickedPanel.BackColor == Color.DimGray)
+            {
+                clickedPanel.BackColor = Color.Transparent;
+                return;
+            }
+            if (clickedPanel.BackColor == Color.Gold)
+            {
+                DialogResult result = MessageBox.Show("Termin löschen[OK] oder Auswahl zurücksetzen [Cancel]",
+                        "Termin Löschen", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                  
+                }
+
+            }
+          
         }
 
-        private void Profil_Bearbeiten_Button_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Löschen_Button_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Beenden_Button_Click(object sender, EventArgs e)
         {
+            k1.setTagesplan(Tagesplanliste);
             Close();
         }
 
@@ -128,6 +144,59 @@ namespace Kalender_Gold_Coorp
         {
             Label_reset();
             Panel_reset();
+            Eventtxtb.Text = "";
+            deleteday(Datum);
+        }
+        private void deleteday(DateTime test9)
+        {
+            string datumloeschen = test9.ToShortDateString();
+            for (int i = 0; i < Tagesplanliste.Count; i++)
+            {
+                if (Tagesplanliste[i] == datumloeschen)
+                {
+                    Tagesplanliste.RemoveAt(i);
+                    return;
+                }
+            }
+        }
+        private void panel32_MouseDown(object sender, MouseEventArgs e) //Move ermöglichen
+        {
+            mov = 1;
+            movX = e.X;
+            movy = e.Y;
+        }
+
+        private void panel32_MouseUp(object sender, MouseEventArgs e) //Move ermöglichen
+        {
+            mov = 0;
+        }
+        private void panel32_MouseMove(object sender, MouseEventArgs e) //Move ermöglichen
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movy);
+            }
+        }
+
+
+        private void Bearbeiten_Button_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 24; i++)
+            {
+                if (_Panels[i].BackColor == Color.DimGray)
+                {
+                    int k = 30 * i;
+                    int b = k / 60;
+                    int c = k % 60;
+                    DateTime uhrzeit_ = new DateTime(Datum.Year, Datum.Month, Datum.Day, 7+b, 0+c, 0);  
+                    DateTime name = new DateTime(Datum.Year, Datum.Month, Datum.Day,uhrzeit_.Hour, uhrzeit_.Minute, 0);
+                    string Datetimes_ = "" + name.ToString() + "%" + Eventtxtb.Text;
+                    Tagesplanliste.Add(Datetimes_);
+                    MessageBox.Show(Datetimes_);
+                }
+            }
+           
         }
     }
 }
+

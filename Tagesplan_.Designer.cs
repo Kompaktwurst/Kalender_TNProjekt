@@ -107,13 +107,13 @@
             this.Auswahldatum = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.Clear_Button = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Beenden_Button = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Löschen_Button = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Profil_Bearbeiten_Button = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label49 = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.Eventtxtb = new System.Windows.Forms.TextBox();
+            this.Clear_Button = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Beenden_Button = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Profil_Bearbeiten_Button = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -142,8 +142,8 @@
             this.panel1.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel27.SuspendLayout();
-            this.panel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel26.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -255,7 +255,7 @@
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(35, 13);
             this.label48.TabIndex = 15;
-            this.label48.Text = "19:00";
+            this.label48.Text = "18:30";
             // 
             // label24
             // 
@@ -405,7 +405,7 @@
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(34, 14);
             this.label31.TabIndex = 2;
-            this.label31.Text = "10:30";
+            this.label31.Text = "10:00";
             // 
             // label7
             // 
@@ -435,7 +435,7 @@
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(34, 14);
             this.label32.TabIndex = 2;
-            this.label32.Text = "11:00";
+            this.label32.Text = "10:30";
             // 
             // label8
             // 
@@ -465,7 +465,7 @@
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(34, 14);
             this.label33.TabIndex = 2;
-            this.label33.Text = "11:30";
+            this.label33.Text = "11:00";
             // 
             // label9
             // 
@@ -491,12 +491,12 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(4, 13);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(35, 13);
+            this.label34.Size = new System.Drawing.Size(34, 14);
             this.label34.TabIndex = 2;
-            this.label34.Text = "12:00";
+            this.label34.Text = "11:30";
             // 
             // label10
             // 
@@ -526,7 +526,7 @@
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(34, 14);
             this.label35.TabIndex = 2;
-            this.label35.Text = "12:30";
+            this.label35.Text = "12:00";
             // 
             // label11
             // 
@@ -556,7 +556,7 @@
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(34, 14);
             this.label36.TabIndex = 3;
-            this.label36.Text = "13:00";
+            this.label36.Text = "12:30";
             // 
             // label12
             // 
@@ -586,7 +586,7 @@
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(34, 14);
             this.label37.TabIndex = 4;
-            this.label37.Text = "13:30";
+            this.label37.Text = "13:00";
             // 
             // label13
             // 
@@ -616,7 +616,7 @@
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(34, 14);
             this.label38.TabIndex = 5;
-            this.label38.Text = "14:00";
+            this.label38.Text = "13:30";
             // 
             // label14
             // 
@@ -646,7 +646,7 @@
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(34, 14);
             this.label39.TabIndex = 6;
-            this.label39.Text = "14:30";
+            this.label39.Text = "14:00";
             // 
             // label15
             // 
@@ -676,7 +676,7 @@
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(34, 14);
             this.label40.TabIndex = 7;
-            this.label40.Text = "15:00";
+            this.label40.Text = "14:30";
             // 
             // label16
             // 
@@ -706,7 +706,7 @@
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(34, 14);
             this.label41.TabIndex = 8;
-            this.label41.Text = "15:30";
+            this.label41.Text = "15:00";
             // 
             // label17
             // 
@@ -737,7 +737,7 @@
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(35, 13);
             this.label42.TabIndex = 9;
-            this.label42.Text = "16:00";
+            this.label42.Text = "15:30";
             // 
             // label18
             // 
@@ -767,7 +767,7 @@
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(34, 14);
             this.label43.TabIndex = 10;
-            this.label43.Text = "16:30";
+            this.label43.Text = "16:00";
             // 
             // label19
             // 
@@ -797,7 +797,7 @@
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(34, 14);
             this.label44.TabIndex = 11;
-            this.label44.Text = "17:00";
+            this.label44.Text = "16:30";
             // 
             // label20
             // 
@@ -827,7 +827,7 @@
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(34, 14);
             this.label45.TabIndex = 12;
-            this.label45.Text = "17:30";
+            this.label45.Text = "17:00";
             // 
             // label21
             // 
@@ -857,7 +857,7 @@
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(34, 14);
             this.label46.TabIndex = 13;
-            this.label46.Text = "18:00";
+            this.label46.Text = "17:30";
             // 
             // label22
             // 
@@ -887,7 +887,7 @@
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(34, 14);
             this.label47.TabIndex = 14;
-            this.label47.Text = "18:30";
+            this.label47.Text = "18:00";
             // 
             // label23
             // 
@@ -941,6 +941,9 @@
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(570, 66);
             this.panel25.TabIndex = 1;
+            this.panel25.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
+            this.panel25.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
+            this.panel25.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
             // 
             // Auswahldatum
             // 
@@ -973,19 +976,53 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(181, 66);
             this.panel27.TabIndex = 0;
+            this.panel27.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
+            this.panel27.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
+            this.panel27.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.White;
+            this.label49.Location = new System.Drawing.Point(44, 21);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(134, 25);
+            this.label49.TabIndex = 4;
+            this.label49.Text = "Gold Coorp";
             // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel26.Controls.Add(this.Eventtxtb);
             this.panel26.Controls.Add(this.Clear_Button);
             this.panel26.Controls.Add(this.Beenden_Button);
-            this.panel26.Controls.Add(this.Löschen_Button);
             this.panel26.Controls.Add(this.Profil_Bearbeiten_Button);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel26.Location = new System.Drawing.Point(0, 66);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(181, 713);
             this.panel26.TabIndex = 2;
+            this.panel26.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
+            this.panel26.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
+            this.panel26.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
+            // 
+            // Eventtxtb
+            // 
+            this.Eventtxtb.Location = new System.Drawing.Point(49, 239);
+            this.Eventtxtb.Name = "Eventtxtb";
+            this.Eventtxtb.Size = new System.Drawing.Size(100, 20);
+            this.Eventtxtb.TabIndex = 5;
             // 
             // Clear_Button
             // 
@@ -1009,7 +1046,7 @@
             this.Clear_Button.IconVisible = true;
             this.Clear_Button.IconZoom = 90D;
             this.Clear_Button.IsTab = false;
-            this.Clear_Button.Location = new System.Drawing.Point(0, 129);
+            this.Clear_Button.Location = new System.Drawing.Point(0, 62);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.Clear_Button.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
@@ -1059,42 +1096,6 @@
             this.Beenden_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Beenden_Button.Click += new System.EventHandler(this.Beenden_Button_Click);
             // 
-            // Löschen_Button
-            // 
-            this.Löschen_Button.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Löschen_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Löschen_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Löschen_Button.BorderRadius = 0;
-            this.Löschen_Button.ButtonText = "             Löschen";
-            this.Löschen_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Löschen_Button.DisabledColor = System.Drawing.Color.Gray;
-            this.Löschen_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Löschen_Button.Iconcolor = System.Drawing.Color.Transparent;
-            this.Löschen_Button.Iconimage = null;
-            this.Löschen_Button.Iconimage_right = null;
-            this.Löschen_Button.Iconimage_right_Selected = null;
-            this.Löschen_Button.Iconimage_Selected = null;
-            this.Löschen_Button.IconMarginLeft = 0;
-            this.Löschen_Button.IconMarginRight = 0;
-            this.Löschen_Button.IconRightVisible = true;
-            this.Löschen_Button.IconRightZoom = 0D;
-            this.Löschen_Button.IconVisible = true;
-            this.Löschen_Button.IconZoom = 90D;
-            this.Löschen_Button.IsTab = false;
-            this.Löschen_Button.Location = new System.Drawing.Point(0, 62);
-            this.Löschen_Button.Name = "Löschen_Button";
-            this.Löschen_Button.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Löschen_Button.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Löschen_Button.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.Löschen_Button.selected = false;
-            this.Löschen_Button.Size = new System.Drawing.Size(181, 67);
-            this.Löschen_Button.TabIndex = 2;
-            this.Löschen_Button.Text = "             Löschen";
-            this.Löschen_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Löschen_Button.Textcolor = System.Drawing.Color.LightGray;
-            this.Löschen_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Löschen_Button.Click += new System.EventHandler(this.Löschen_Button_Click);
-            // 
             // Profil_Bearbeiten_Button
             // 
             this.Profil_Bearbeiten_Button.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
@@ -1129,28 +1130,7 @@
             this.Profil_Bearbeiten_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Profil_Bearbeiten_Button.Textcolor = System.Drawing.Color.LightGray;
             this.Profil_Bearbeiten_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profil_Bearbeiten_Button.Click += new System.EventHandler(this.Profil_Bearbeiten_Button_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.White;
-            this.label49.Location = new System.Drawing.Point(44, 21);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(134, 25);
-            this.label49.TabIndex = 4;
-            this.label49.Text = "Gold Coorp";
+            this.Profil_Bearbeiten_Button.Click += new System.EventHandler(this.Bearbeiten_Button_Click);
             // 
             // bunifuElipse1
             // 
@@ -1227,8 +1207,9 @@
             this.panel25.PerformLayout();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
-            this.panel26.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1314,11 +1295,11 @@
         private System.Windows.Forms.Label Auswahldatum;
         private System.Windows.Forms.Label label50;
         private Bunifu.Framework.UI.BunifuFlatButton Beenden_Button;
-        private Bunifu.Framework.UI.BunifuFlatButton Löschen_Button;
         private Bunifu.Framework.UI.BunifuFlatButton Profil_Bearbeiten_Button;
         private Bunifu.Framework.UI.BunifuFlatButton Clear_Button;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label49;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.TextBox Eventtxtb;
     }
 }
