@@ -42,7 +42,7 @@ namespace Kalender_Gold_Coorp
                 int month = Convert.ToInt32(temp[3] + "" + temp[4]);
                 int year = Convert.ToInt32(temp[6] + "" + temp[7] + "" + temp[8] + "" + temp[9]);
                 DateTime temp1 = new DateTime(year, month, day);
-
+              
                 if (temp1.CompareTo(DateTime.Today) == 1)
                 {
 
@@ -50,6 +50,7 @@ namespace Kalender_Gold_Coorp
                     Krankheitstage_Liste.Remove(temp1);
                     SelectedDatum.Text = "";
                     Selected = false;
+                
                 }
                 else
                 {

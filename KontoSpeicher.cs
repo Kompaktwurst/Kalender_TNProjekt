@@ -9,7 +9,8 @@ namespace Kalender_Gold_Coorp
    public class KontoSpeicher
     {
         private List<Konto> k1;
-        public KontoSpeicher()=>k1=new List<Konto>();
+        public KontoSpeicher()
+        { k1 = new List<Konto>(); }
         public int GetListenLänge() => k1.Count;
         public void AddKonto(Konto k1_)
         {
