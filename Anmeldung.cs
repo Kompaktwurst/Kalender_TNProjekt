@@ -108,7 +108,7 @@ namespace Kalender_Gold_Coorp
 
         private void Information_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Programm Version: 1.2.9b");
+            MessageBox.Show("Programm Version: 1.3.5b");
         }
 
         private void label4_Click(object sender, EventArgs e)
