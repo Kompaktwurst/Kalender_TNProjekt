@@ -13,6 +13,7 @@ namespace Kalender_Gold_Coorp
         static int laenge = 24;
         private Panel[] _Panels = new Panel[laenge];
         private Label[] _Labels = new Label[laenge];
+        private Label[] __Labels = new Label[laenge];
         private List<string> Tagesplanliste;
         public Tagesplan(Konto k1_, DateTime Datum_)
         {
@@ -21,10 +22,10 @@ namespace Kalender_Gold_Coorp
             Datum = Datum_;
             Auswahldatum.Text = Datum.ToShortDateString();
             Tagesplanliste = new List<string>();
-            Tagesplanliste = k1.GetTagesplan();
             Form_init();
             Label_reset();
             Panel_reset();
+            TermineLaden();
           
 
         }
@@ -93,6 +94,31 @@ namespace Kalender_Gold_Coorp
             _Labels[21] = label22;
             _Labels[22] = label23;
             _Labels[23] = label24;
+            __Labels[0] = label25;
+            __Labels[1] = label26;
+            __Labels[2] = label27;
+            __Labels[3] = label28;
+            __Labels[4] = label29;
+            __Labels[5] = label30;
+            __Labels[6] = label31;
+            __Labels[7] = label32;
+            __Labels[8] = label33;
+            __Labels[9] = label34;
+            __Labels[10] = label35;
+            __Labels[11] = label36;
+            __Labels[12] = label37;
+            __Labels[13] = label38;
+            __Labels[14] = label39;
+            __Labels[15] = label40;
+            __Labels[16] = label41;
+            __Labels[17] = label42;
+            __Labels[18] = label43;
+            __Labels[19] = label44;
+            __Labels[20] = label45;
+            __Labels[21] = label46;
+            __Labels[22] = label47;
+            __Labels[23] = label48;
+           
         }
         private void Label_reset()
         {
@@ -105,6 +131,36 @@ namespace Kalender_Gold_Coorp
         {
             Panel_init();
             Label_init();
+           
+        }
+        private void TermineLaden()
+        {
+            Tagesplanliste = k1.GetTagesplan();
+            Tagesplanliste.ForEach(delegate (string Termindate)
+                {
+                    string temp1;
+                    int day, month, year;
+                    temp1 = Termindate[0] + "" + Termindate[1];
+                    day = Convert.ToInt32(temp1);
+                    temp1 = Termindate[3] + "" + Termindate[4];
+                    month = Convert.ToInt32(temp1);
+                    temp1 = Termindate[6] + "" + Termindate[7] + "" + Termindate[8] + "" + Termindate[9];
+                    year = Convert.ToInt32(temp1);
+                    DateTime Termin = new DateTime(year, month, day);
+                    if (Termin ==Datum)
+                    {       
+                        temp1 = Termindate[11] + "" + Termindate[12]+":"+Termindate[14] + "" + Termindate[15];
+                        for (int i = 0; i < 24; i++)
+                        {
+                            if(__Labels[i].Text==temp1)
+                            {  
+                                _Panels[i].BackColor = Color.Gold;      
+                                string[] p= Termindate.Split('%');
+                                _Labels[i].Text = p[1];
+                            }
+                        }
+                    }
+                });
         }
 
         private void Panel_Click(object sender, EventArgs e) //Alle Panels reagieren auf dieses Ereignis
@@ -170,6 +226,15 @@ namespace Kalender_Gold_Coorp
         {
             mov = 0;
         }
+
+        private void Eventtxtb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Speichern();
+            }
+        }
+
         private void panel32_MouseMove(object sender, MouseEventArgs e) //Move ermöglichen
         {
             if (mov == 1)
@@ -178,8 +243,7 @@ namespace Kalender_Gold_Coorp
             }
         }
 
-
-        private void Bearbeiten_Button_Click(object sender, EventArgs e)
+        private void Speichern()
         {
             for (int i = 0; i < 24; i++)
             {
@@ -188,14 +252,19 @@ namespace Kalender_Gold_Coorp
                     int k = 30 * i;
                     int b = k / 60;
                     int c = k % 60;
-                    DateTime uhrzeit_ = new DateTime(Datum.Year, Datum.Month, Datum.Day, 7+b, 0+c, 0);  
-                    DateTime name = new DateTime(Datum.Year, Datum.Month, Datum.Day,uhrzeit_.Hour, uhrzeit_.Minute, 0);
-                    string Datetimes_ = "" + name.ToString() + "%" + Eventtxtb.Text;
+                    DateTime uhrzeit_ = new DateTime(Datum.Year, Datum.Month, Datum.Day, 7 + b, 0 + c, 0);
+                    DateTime name = new DateTime(Datum.Year, Datum.Month, Datum.Day, uhrzeit_.Hour, uhrzeit_.Minute, 0);
+                    string Datetimes_ = "" + name.ToString() + "%" + Eventtxtb.Text + "%";
                     Tagesplanliste.Add(Datetimes_);
                     MessageBox.Show(Datetimes_);
                 }
             }
-           
+
+        }
+        private void Bearbeiten_Button_Click(object sender, EventArgs e)
+        {
+
+            Speichern();
         }
     }
 }

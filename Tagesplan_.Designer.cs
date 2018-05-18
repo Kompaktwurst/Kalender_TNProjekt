@@ -110,11 +110,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label49 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.Eventtxtb = new System.Windows.Forms.TextBox();
             this.Clear_Button = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Beenden_Button = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Profil_Bearbeiten_Button = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Eventtxtb = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel24.SuspendLayout();
@@ -215,6 +215,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(194, 28);
             this.panel2.TabIndex = 1;
+            this.panel2.Tag = "7,5";
             this.panel2.Click += new System.EventHandler(this.Panel_Click);
             // 
             // label26
@@ -276,6 +277,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(194, 28);
             this.panel3.TabIndex = 2;
+            this.panel3.Tag = "8";
             this.panel3.Click += new System.EventHandler(this.Panel_Click);
             // 
             // label27
@@ -306,6 +308,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(194, 28);
             this.panel4.TabIndex = 3;
+            this.panel4.Tag = "8,5";
             this.panel4.Click += new System.EventHandler(this.Panel_Click);
             // 
             // label28
@@ -336,6 +339,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(194, 28);
             this.panel5.TabIndex = 4;
+            this.panel5.Tag = "9";
             this.panel5.Click += new System.EventHandler(this.Panel_Click);
             // 
             // label29
@@ -366,6 +370,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(194, 28);
             this.panel6.TabIndex = 5;
+            this.panel6.Tag = "9,5";
             this.panel6.Click += new System.EventHandler(this.Panel_Click);
             // 
             // label30
@@ -908,6 +913,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 28);
             this.panel1.TabIndex = 24;
+            this.panel1.Tag = "7";
             this.panel1.Click += new System.EventHandler(this.Panel_Click);
             // 
             // label25
@@ -1016,13 +1022,6 @@
             this.panel26.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
             this.panel26.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
             this.panel26.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
-            // 
-            // Eventtxtb
-            // 
-            this.Eventtxtb.Location = new System.Drawing.Point(49, 239);
-            this.Eventtxtb.Name = "Eventtxtb";
-            this.Eventtxtb.Size = new System.Drawing.Size(100, 20);
-            this.Eventtxtb.TabIndex = 5;
             // 
             // Clear_Button
             // 
@@ -1137,6 +1136,24 @@
             this.bunifuElipse1.ElipseRadius = 25;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // Eventtxtb
+            // 
+            this.Eventtxtb.BorderColorFocused = System.Drawing.Color.Blue;
+            this.Eventtxtb.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Eventtxtb.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.Eventtxtb.BorderThickness = 3;
+            this.Eventtxtb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Eventtxtb.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Eventtxtb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Eventtxtb.isPassword = false;
+            this.Eventtxtb.Location = new System.Drawing.Point(0, 181);
+            this.Eventtxtb.Margin = new System.Windows.Forms.Padding(4);
+            this.Eventtxtb.Name = "Eventtxtb";
+            this.Eventtxtb.Size = new System.Drawing.Size(177, 44);
+            this.Eventtxtb.TabIndex = 6;
+            this.Eventtxtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Eventtxtb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Eventtxtb_KeyDown);
+            // 
             // Tagesplan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -1209,7 +1226,6 @@
             this.panel27.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1300,6 +1316,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label49;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.TextBox Eventtxtb;
+        private Bunifu.Framework.UI.BunifuMetroTextbox Eventtxtb;
     }
 }
