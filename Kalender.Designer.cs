@@ -141,7 +141,6 @@
             this.Profil_Bearbeiten_Button = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label34 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.textBox1 = new ZBobb.AlphaBlendTextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.Profilbild = new System.Windows.Forms.PictureBox();
@@ -150,6 +149,9 @@
             this.panel35 = new System.Windows.Forms.Panel();
             this.AnzahlKontenLabel = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.textBox1 = new ZBobb.AlphaBlendTextBox();
+            this.ListeUrlauber = new System.Windows.Forms.ListBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel30.SuspendLayout();
@@ -1616,20 +1618,6 @@
             this.bunifuElipse1.ElipseRadius = 25;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // textBox1
-            // 
-            this.textBox1.BackAlpha = 10;
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.textBox1.Location = new System.Drawing.Point(204, 161);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 242);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Text = "Urlaub\r\n1.\r\n2.\r\n3.\r\nErkrankt\r\n1.\r\n2.\r\n3.\r\nGlobale Nachrichten:";
-            // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.DarkGray;
@@ -1719,13 +1707,47 @@
             this.label38.TabIndex = 1;
             this.label38.Text = "Users";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackAlpha = 10;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.textBox1.Location = new System.Drawing.Point(204, 62);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(274, 242);
+            this.textBox1.TabIndex = 36;
+            this.textBox1.Text = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nGlobale Nachrichten:";
+            // 
+            // ListeUrlauber
+            // 
+            this.ListeUrlauber.FormattingEnabled = true;
+            this.ListeUrlauber.Location = new System.Drawing.Point(207, 349);
+            this.ListeUrlauber.Name = "ListeUrlauber";
+            this.ListeUrlauber.Size = new System.Drawing.Size(184, 69);
+            this.ListeUrlauber.TabIndex = 40;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.label43.Location = new System.Drawing.Point(206, 326);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(187, 20);
+            this.label43.TabIndex = 41;
+            this.label43.Text = "An dem Tag im Urlaub:";
+            // 
             // Kalender
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1123, 620);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.ListeUrlauber);
             this.Controls.Add(this.panel34);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label40);
@@ -1751,6 +1773,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel33);
+            this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1956,7 +1979,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton Beenden_button;
         private System.Windows.Forms.Label label34;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private ZBobb.AlphaBlendTextBox textBox1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.PictureBox Profilbild;
@@ -1966,5 +1988,8 @@
         private System.Windows.Forms.Label AnzahlKontenLabel;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ZBobb.AlphaBlendTextBox textBox1;
+        private System.Windows.Forms.ListBox ListeUrlauber;
+        private System.Windows.Forms.Label label43;
     }
 }

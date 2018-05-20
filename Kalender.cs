@@ -190,11 +190,20 @@ namespace Kalender_Gold_Coorp
                 string tmp = sender.ToString();
                 s = tmp.Substring(tmp.Length - 2);
                 t = Datum_anpassung();
-                if(t.Year>DateTime.Today.Year)
+                ListeUrlauber.Items.Clear();
+                for (int i = 0; i < verwaltung.GetAnzahlKonten(); i++)
+                {
+                    Konto k3 = verwaltung.GetKonto(i);
+                    if (k3.GetUrlaubstage().Contains(t) == true)
+                    {
+                        ListeUrlauber.Items.Add(k3.GetBenutzername());
+                    }
+                }
+                if (t.Year>DateTime.Today.Year)
                 {
                     return;
                 }
-                if(t.DayOfWeek.ToString()=="Sunday"|| t.DayOfWeek.ToString() == "Saturday")
+                if(t.DayOfWeek.ToString()=="Sunday"|| t.DayOfWeek.ToString() == "Saturday"||ListeUrlauber.Items.Count>=3)
                 {
                     return;
                 }
@@ -269,7 +278,9 @@ namespace Kalender_Gold_Coorp
                 MessageBox.Show("Urlaubstage aufgebraucht schauen Sie in die Urlaubstage Liste!");
             }
             s = null;
+
          
+            
         } // Event: Klick auf die KalenderLabels
         private void SetKonten_Zaehler()
         {
