@@ -35,7 +35,7 @@ namespace Kalender_Gold_Coorp
 
         public static string GetPath()
         {
-            string path = Directory.GetCurrentDirectory() + @"\KontenTN.txt";
+            string path = @"C:\Users\Public\KontenTN.txt";
             return path;
         }
         private void Verwaltung__FormClosing(object sender, FormClosingEventArgs e)
