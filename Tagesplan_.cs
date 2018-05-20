@@ -196,25 +196,6 @@ namespace Kalender_Gold_Coorp
             Close();
         }
 
-        private void Clear_Button_Click(object sender, EventArgs e)
-        {
-            Label_reset();
-            Panel_reset();
-            Eventtxtb.Text = "";
-            deleteday(Datum);
-        }
-        private void deleteday(DateTime test9)
-        {
-            string datumloeschen = test9.ToShortDateString();
-            for (int i = 0; i < Tagesplanliste.Count; i++)
-            {
-                if (Tagesplanliste[i] == datumloeschen)
-                {
-                    Tagesplanliste.RemoveAt(i);
-                    return;
-                }
-            }
-        }
         private void panel32_MouseDown(object sender, MouseEventArgs e) //Move ermöglichen
         {
             mov = 1;
@@ -255,10 +236,10 @@ namespace Kalender_Gold_Coorp
                     DateTime uhrzeit_ = new DateTime(Datum.Year, Datum.Month, Datum.Day, 7 + b, 0 + c, 0);
                     DateTime name = new DateTime(Datum.Year, Datum.Month, Datum.Day, uhrzeit_.Hour, uhrzeit_.Minute, 0);
                     string Datetimes_ = "" + name.ToString() + "%" + Eventtxtb.Text + "%";
-                    Tagesplanliste.Add(Datetimes_);
-                    MessageBox.Show(Datetimes_);
+                    Tagesplanliste.Add(Datetimes_);   
                 }
             }
+            TermineLaden();
 
         }
         private void Bearbeiten_Button_Click(object sender, EventArgs e)
