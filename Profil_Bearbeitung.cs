@@ -25,8 +25,6 @@ namespace Kalender_Gold_Coorp
         }
        
 
-      
-
         private void Avatare_Close(object sender, FormClosedEventArgs e)
         {
             pictureBox1.Image = k1.GetProfilbild();
@@ -40,11 +38,6 @@ namespace Kalender_Gold_Coorp
             c.FormClosed += Avatare_Close;
 
             c.ShowDialog();
-        }
-
-        private void Daten_Button_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Status_Button_Click(object sender, EventArgs e)

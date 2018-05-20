@@ -1461,7 +1461,7 @@
             this.Anfrage_an_Admin_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.Anfrage_an_Admin_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Anfrage_an_Admin_Button.BorderRadius = 0;
-            this.Anfrage_an_Admin_Button.ButtonText = "             Anfrage an Admin";
+            this.Anfrage_an_Admin_Button.ButtonText = "             Admin";
             this.Anfrage_an_Admin_Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Anfrage_an_Admin_Button.DisabledColor = System.Drawing.Color.Gray;
             this.Anfrage_an_Admin_Button.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1485,10 +1485,11 @@
             this.Anfrage_an_Admin_Button.selected = false;
             this.Anfrage_an_Admin_Button.Size = new System.Drawing.Size(200, 58);
             this.Anfrage_an_Admin_Button.TabIndex = 3;
-            this.Anfrage_an_Admin_Button.Text = "             Anfrage an Admin";
+            this.Anfrage_an_Admin_Button.Text = "             Admin";
             this.Anfrage_an_Admin_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Anfrage_an_Admin_Button.Textcolor = System.Drawing.Color.LightGray;
             this.Anfrage_an_Admin_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Anfrage_an_Admin_Button.Visible = false;
             this.Anfrage_an_Admin_Button.Click += new System.EventHandler(this.Anfrage_an_Admin_Button_Click);
             // 
             // Urlaubstage_Button

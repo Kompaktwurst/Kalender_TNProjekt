@@ -36,21 +36,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.Name_überschrift_Label = new System.Windows.Forms.Label();
+            this.LogoPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.LogoPanel = new System.Windows.Forms.Panel();
-            this.Avatar_Button = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Daten_Button = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Status_Button = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Name_überschrift_Label = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.Beenden_button = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Status_Button = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Avatar_Button = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.LogoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -118,21 +117,29 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_MouseUp);
             // 
-            // panel2
+            // Name_überschrift_Label
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.panel2.Controls.Add(this.Beenden_button);
-            this.panel2.Controls.Add(this.Status_Button);
-            this.panel2.Controls.Add(this.Daten_Button);
-            this.panel2.Controls.Add(this.Avatar_Button);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 93);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 481);
-            this.panel2.TabIndex = 5;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_MouseUp);
+            this.Name_überschrift_Label.AutoSize = true;
+            this.Name_überschrift_Label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_überschrift_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Name_überschrift_Label.Location = new System.Drawing.Point(286, 35);
+            this.Name_überschrift_Label.Name = "Name_überschrift_Label";
+            this.Name_überschrift_Label.Size = new System.Drawing.Size(146, 25);
+            this.Name_überschrift_Label.TabIndex = 35;
+            this.Name_überschrift_Label.Text = "Name´s Profil";
+            // 
+            // LogoPanel
+            // 
+            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.LogoPanel.Controls.Add(this.pictureBox2);
+            this.LogoPanel.Controls.Add(this.label41);
+            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
+            this.LogoPanel.Name = "LogoPanel";
+            this.LogoPanel.Size = new System.Drawing.Size(222, 93);
+            this.LogoPanel.TabIndex = 34;
+            this.LogoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
+            this.LogoPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
+            this.LogoPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_MouseUp);
             // 
             // pictureBox2
             // 
@@ -155,137 +162,20 @@
             this.label41.TabIndex = 0;
             this.label41.Text = "Gold Coorp";
             // 
-            // LogoPanel
+            // panel2
             // 
-            this.LogoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.LogoPanel.Controls.Add(this.pictureBox2);
-            this.LogoPanel.Controls.Add(this.label41);
-            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
-            this.LogoPanel.Name = "LogoPanel";
-            this.LogoPanel.Size = new System.Drawing.Size(222, 93);
-            this.LogoPanel.TabIndex = 34;
-            this.LogoPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
-            this.LogoPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
-            this.LogoPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_MouseUp);
-            // 
-            // Avatar_Button
-            // 
-            this.Avatar_Button.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Avatar_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Avatar_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Avatar_Button.BorderRadius = 0;
-            this.Avatar_Button.ButtonText = "             Avatar wechseln";
-            this.Avatar_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Avatar_Button.DisabledColor = System.Drawing.Color.Gray;
-            this.Avatar_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Avatar_Button.Iconcolor = System.Drawing.Color.Transparent;
-            this.Avatar_Button.Iconimage = null;
-            this.Avatar_Button.Iconimage_right = null;
-            this.Avatar_Button.Iconimage_right_Selected = null;
-            this.Avatar_Button.Iconimage_Selected = null;
-            this.Avatar_Button.IconMarginLeft = 0;
-            this.Avatar_Button.IconMarginRight = 0;
-            this.Avatar_Button.IconRightVisible = true;
-            this.Avatar_Button.IconRightZoom = 0D;
-            this.Avatar_Button.IconVisible = true;
-            this.Avatar_Button.IconZoom = 90D;
-            this.Avatar_Button.IsTab = false;
-            this.Avatar_Button.Location = new System.Drawing.Point(0, 0);
-            this.Avatar_Button.Name = "Avatar_Button";
-            this.Avatar_Button.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Avatar_Button.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Avatar_Button.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.Avatar_Button.selected = false;
-            this.Avatar_Button.Size = new System.Drawing.Size(222, 58);
-            this.Avatar_Button.TabIndex = 2;
-            this.Avatar_Button.Text = "             Avatar wechseln";
-            this.Avatar_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Avatar_Button.Textcolor = System.Drawing.Color.LightGray;
-            this.Avatar_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Avatar_Button.Click += new System.EventHandler(this.Avatar_Button_Click);
-            // 
-            // Daten_Button
-            // 
-            this.Daten_Button.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Daten_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Daten_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Daten_Button.BorderRadius = 0;
-            this.Daten_Button.ButtonText = "             Pers. Daten ändern";
-            this.Daten_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Daten_Button.DisabledColor = System.Drawing.Color.Gray;
-            this.Daten_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Daten_Button.Iconcolor = System.Drawing.Color.Transparent;
-            this.Daten_Button.Iconimage = null;
-            this.Daten_Button.Iconimage_right = null;
-            this.Daten_Button.Iconimage_right_Selected = null;
-            this.Daten_Button.Iconimage_Selected = null;
-            this.Daten_Button.IconMarginLeft = 0;
-            this.Daten_Button.IconMarginRight = 0;
-            this.Daten_Button.IconRightVisible = true;
-            this.Daten_Button.IconRightZoom = 0D;
-            this.Daten_Button.IconVisible = true;
-            this.Daten_Button.IconZoom = 90D;
-            this.Daten_Button.IsTab = false;
-            this.Daten_Button.Location = new System.Drawing.Point(0, 58);
-            this.Daten_Button.Name = "Daten_Button";
-            this.Daten_Button.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Daten_Button.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Daten_Button.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.Daten_Button.selected = false;
-            this.Daten_Button.Size = new System.Drawing.Size(222, 62);
-            this.Daten_Button.TabIndex = 3;
-            this.Daten_Button.Text = "             Pers. Daten ändern";
-            this.Daten_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Daten_Button.Textcolor = System.Drawing.Color.LightGray;
-            this.Daten_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Daten_Button.Click += new System.EventHandler(this.Daten_Button_Click);
-            // 
-            // Status_Button
-            // 
-            this.Status_Button.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Status_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Status_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Status_Button.BorderRadius = 0;
-            this.Status_Button.ButtonText = "             Status speichern";
-            this.Status_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Status_Button.DisabledColor = System.Drawing.Color.Gray;
-            this.Status_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Status_Button.Iconcolor = System.Drawing.Color.Transparent;
-            this.Status_Button.Iconimage = null;
-            this.Status_Button.Iconimage_right = null;
-            this.Status_Button.Iconimage_right_Selected = null;
-            this.Status_Button.Iconimage_Selected = null;
-            this.Status_Button.IconMarginLeft = 0;
-            this.Status_Button.IconMarginRight = 0;
-            this.Status_Button.IconRightVisible = true;
-            this.Status_Button.IconRightZoom = 0D;
-            this.Status_Button.IconVisible = true;
-            this.Status_Button.IconZoom = 90D;
-            this.Status_Button.IsTab = false;
-            this.Status_Button.Location = new System.Drawing.Point(0, 120);
-            this.Status_Button.Name = "Status_Button";
-            this.Status_Button.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Status_Button.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.Status_Button.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.Status_Button.selected = false;
-            this.Status_Button.Size = new System.Drawing.Size(222, 62);
-            this.Status_Button.TabIndex = 4;
-            this.Status_Button.Text = "             Status speichern";
-            this.Status_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Status_Button.Textcolor = System.Drawing.Color.LightGray;
-            this.Status_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status_Button.Click += new System.EventHandler(this.Status_Button_Click);
-            // 
-            // Name_überschrift_Label
-            // 
-            this.Name_überschrift_Label.AutoSize = true;
-            this.Name_überschrift_Label.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name_überschrift_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.Name_überschrift_Label.Location = new System.Drawing.Point(286, 35);
-            this.Name_überschrift_Label.Name = "Name_überschrift_Label";
-            this.Name_überschrift_Label.Size = new System.Drawing.Size(146, 25);
-            this.Name_überschrift_Label.TabIndex = 35;
-            this.Name_überschrift_Label.Text = "Name´s Profil";
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel2.Controls.Add(this.Beenden_button);
+            this.panel2.Controls.Add(this.Status_Button);
+            this.panel2.Controls.Add(this.Avatar_Button);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 93);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(222, 481);
+            this.panel2.TabIndex = 5;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_MouseUp);
             // 
             // Beenden_button
             // 
@@ -323,6 +213,78 @@
             this.Beenden_button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Beenden_button.Click += new System.EventHandler(this.Beenden_button_Click);
             // 
+            // Status_Button
+            // 
+            this.Status_Button.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.Status_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Status_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Status_Button.BorderRadius = 0;
+            this.Status_Button.ButtonText = "             Status speichern";
+            this.Status_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Status_Button.DisabledColor = System.Drawing.Color.Gray;
+            this.Status_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Status_Button.Iconcolor = System.Drawing.Color.Transparent;
+            this.Status_Button.Iconimage = null;
+            this.Status_Button.Iconimage_right = null;
+            this.Status_Button.Iconimage_right_Selected = null;
+            this.Status_Button.Iconimage_Selected = null;
+            this.Status_Button.IconMarginLeft = 0;
+            this.Status_Button.IconMarginRight = 0;
+            this.Status_Button.IconRightVisible = true;
+            this.Status_Button.IconRightZoom = 0D;
+            this.Status_Button.IconVisible = true;
+            this.Status_Button.IconZoom = 90D;
+            this.Status_Button.IsTab = false;
+            this.Status_Button.Location = new System.Drawing.Point(0, 58);
+            this.Status_Button.Name = "Status_Button";
+            this.Status_Button.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Status_Button.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.Status_Button.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.Status_Button.selected = false;
+            this.Status_Button.Size = new System.Drawing.Size(222, 62);
+            this.Status_Button.TabIndex = 4;
+            this.Status_Button.Text = "             Status speichern";
+            this.Status_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Status_Button.Textcolor = System.Drawing.Color.LightGray;
+            this.Status_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status_Button.Click += new System.EventHandler(this.Status_Button_Click);
+            // 
+            // Avatar_Button
+            // 
+            this.Avatar_Button.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.Avatar_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Avatar_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Avatar_Button.BorderRadius = 0;
+            this.Avatar_Button.ButtonText = "             Avatar wechseln";
+            this.Avatar_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Avatar_Button.DisabledColor = System.Drawing.Color.Gray;
+            this.Avatar_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Avatar_Button.Iconcolor = System.Drawing.Color.Transparent;
+            this.Avatar_Button.Iconimage = null;
+            this.Avatar_Button.Iconimage_right = null;
+            this.Avatar_Button.Iconimage_right_Selected = null;
+            this.Avatar_Button.Iconimage_Selected = null;
+            this.Avatar_Button.IconMarginLeft = 0;
+            this.Avatar_Button.IconMarginRight = 0;
+            this.Avatar_Button.IconRightVisible = true;
+            this.Avatar_Button.IconRightZoom = 0D;
+            this.Avatar_Button.IconVisible = true;
+            this.Avatar_Button.IconZoom = 90D;
+            this.Avatar_Button.IsTab = false;
+            this.Avatar_Button.Location = new System.Drawing.Point(0, 0);
+            this.Avatar_Button.Name = "Avatar_Button";
+            this.Avatar_Button.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.Avatar_Button.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.Avatar_Button.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.Avatar_Button.selected = false;
+            this.Avatar_Button.Size = new System.Drawing.Size(222, 58);
+            this.Avatar_Button.TabIndex = 2;
+            this.Avatar_Button.Text = "             Avatar wechseln";
+            this.Avatar_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Avatar_Button.Textcolor = System.Drawing.Color.LightGray;
+            this.Avatar_Button.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Avatar_Button.Click += new System.EventHandler(this.Avatar_Button_Click);
+            // 
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 25;
@@ -351,10 +313,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.LogoPanel.ResumeLayout(false);
             this.LogoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,7 +334,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label41;
         private Bunifu.Framework.UI.BunifuFlatButton Status_Button;
-        private Bunifu.Framework.UI.BunifuFlatButton Daten_Button;
         private Bunifu.Framework.UI.BunifuFlatButton Avatar_Button;
         private System.Windows.Forms.Label Name_überschrift_Label;
         private Bunifu.Framework.UI.BunifuFlatButton Beenden_button;

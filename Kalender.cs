@@ -52,6 +52,10 @@ namespace Kalender_Gold_Coorp
             Init();
             InitFehltage();
             Refresh_Form();
+            if(k1.GetBenutzername()=="Admin")
+            {
+                Anfrage_an_Admin_Button.Visible = true;
+            }
             
         } //Constructor
         private void Init()
@@ -689,9 +693,11 @@ namespace Kalender_Gold_Coorp
         } //Urlaubstage Form öffnen
         private void Anfrage_an_Admin_Button_Click(object sender, EventArgs e) 
         {
-
+            if (k1.GetBenutzername()=="Admin")
+            {
                 Administration a = new Administration(verwaltung);
                 a.ShowDialog();
+            }
             
         }//Administrator Fenster öffnen
         private void Tagesplan_Button_Click(object sender, EventArgs e)
