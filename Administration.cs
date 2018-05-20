@@ -6,84 +6,39 @@ namespace Kalender_Gold_Coorp
 {
     public partial class Administration : Form
     {
+        Verwaltung_ verwaltung;
+        Konto k1;
         int mov, movX, movy;
-        private List<DateTime> Eventtage;
-        private List<string> EventtageName;
-       
-     
-        public Administration()
+           
+        public Administration(Verwaltung_ verwaltung)
         {
-            
+            this.verwaltung = verwaltung;
                 InitializeComponent();
-                Eventtage = new List<DateTime>();
-                EventtageName = new List<string>();
-              
-            
+            for (int i = 0; i < verwaltung.GetAnzahlKonten(); i++)
+            {
+                k1 = verwaltung.GetKonto(i);
+                listBox1.Items.Add(k1.GetBenutzername());
+
+            }
+            listBox1.SelectedIndex = 0;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            k1 = verwaltung.GetKonto(listBox1.SelectedIndex);
         } //Mitarbeiter Auswahl
-
-        private void Urlaub_Anzeige_Btn_Click(object sender, EventArgs e)
-        {
-
-        } //Urlaubstage des Ausgewählten Mitarbeiters anzeigen
-
-        private void Krankheit_anzeigen_Btn_Click(object sender, EventArgs e)
-        {
-
-        } //Krankheitstage des Ausgewählten Mitarbeiters anzeigen
 
         private void Passwort_ändern_Btn_Click(object sender, EventArgs e)
         {
-
+            Passchange();
         }   //Passwort des Ausgewählten Mitarbeiters ändern
-
-        private void Events_Complete_clear()
-        {
-            Eventtage.Clear();
-            EventtageName.Clear();
-        }                           //Events Löschen
 
         private void Beenden_Button_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void Event_Erstellen_Button_Click(object sender, EventArgs e)
-        {
-            string Eventname = textBox1.Text;
-            DateTime test = dateTimePicker1.Value;
-            MessageBox.Show("" + Eventname + ": " + test);
-            Eventtage.Add(test);
-            if (textBox1.Text != "Eventname")
-            {
-                EventtageName.Add(Eventname);
-            }
-            else
-            {
-                EventtageName.Add("unbenanntes Event");
-            }
-        }
-
-        private void Verwalten_Button_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Wirklich alle Events löschen?",
-                      "Events_Löschen", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (result == DialogResult.OK)
-            {
-                Events_Complete_clear();
-            }
-            else { }
-            return;
-        }
-
-        private void Postfach_Button_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
         private void panel32_MouseMove(object sender, MouseEventArgs e) //Move ermöglichen
         {
             if (mov == 1)
@@ -97,6 +52,19 @@ namespace Kalender_Gold_Coorp
             
         }
 
+        private void newpasswordtxtb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Passchange();
+            }
+        }
+
+        private void Passchange()
+        {
+            k1.setPasswort(newpasswordtxtb.Text);
+            newpasswordtxtb.Text = "";
+        }
         private void panel32_MouseDown(object sender, MouseEventArgs e) //Move ermöglichen
         {
             mov = 1;

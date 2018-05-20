@@ -1,12 +1,4 @@
-﻿//Notizen
-//Urlaubstage-Krankheitstage Switch
-//Design auf alle Forms   
-//Tagesplan
-//Administration
-//Persönliche Daten ändern
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -698,10 +690,10 @@ namespace Kalender_Gold_Coorp
         private void Anfrage_an_Admin_Button_Click(object sender, EventArgs e) 
         {
 
-                Administration a = new Administration();
+                Administration a = new Administration(verwaltung);
                 a.ShowDialog();
             
-        }//Entweder Nachricht an Admin oder Administrator Fenster öffnen
+        }//Administrator Fenster öffnen
         private void Tagesplan_Button_Click(object sender, EventArgs e)
         {
             string temp = label32.Text;

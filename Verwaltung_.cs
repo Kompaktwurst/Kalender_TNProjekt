@@ -43,13 +43,6 @@ namespace Kalender_Gold_Coorp
             k1.Speichern(GetPath());
         }
 
-        //public void SetEvent(List<DateTime> Eventtag_, List<string> Eventtagname_)
-        //{
-        //    Eventtage = Eventtag_;
-        //    EventtageName = Eventtagname_;
-        //}
-        //public List<DateTime> GetEventtag() => Eventtage;
-        //public List<string> GetEventtagname() => EventtageName;
 
         public KontoSpeicher GetKontoSpeicher() => k1;
         public int GetAnzahlKonten() => k1.GetListenLänge();
